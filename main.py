@@ -31,6 +31,28 @@ class MainHandler(BaseHandler):
     def get(self):
         return self.render_template("hello.html")
 
+class AboutMe(BaseHandler):
+    def get(self):
+        personal_info = {"name": "Tomo", "age": "29", "education": "mechanical engineer", "employment": "Hella Saturnus", "town": "Kamnik", "goals": "to become a great programmer"}
+        return self.render_template("aboutme.html", personal_info)
+
+class MyProjects(BaseHandler):
+    def get(self):
+        return self.render_template("myprojects.html")
+
+class Blog(BaseHandler):
+    def get(self):
+        return self.render_template("blog.html")
+
+class Contact(BaseHandler):
+    def get(self):
+        contact_info = {"street": "Stari Grad 1a", "town": "Kamnik", "country": "Slovenija", "email": "strasniligenj@tojeto.si", "instagram": "@strasniligenj", "facebook": "facebook.com/strasniligenj", "snapchat": "@strasniligenj"}
+        return self.render_template("contact.html", contact_info)
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
+    webapp2.Route('/aboutme', AboutMe),
+    webapp2.Route('/myprojects', MyProjects),
+    webapp2.Route('/blog', Blog),
+    webapp2.Route('/contact', Contact),
 ], debug=True)
