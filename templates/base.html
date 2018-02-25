@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock title %}</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+    <body>
+
+        <div>
+            <h1 id="header">{% block header %} {% endblock header %}</h1>
+        </div>
+
+        <div><span class="margin"><a href="/">Home</a></span><span class="margin"><a href="/aboutme">About me</a></span><span class="margin"><a href="/blog">Blog</a></span><span class="margin"><a href="/myprojects">My projects</a></span><span class="margin"><a href="/contact">Contact</a></span></div>
+
+        <br>
+
+
+        {% block content %}
+            Genericna vsebina
+        {% endblock content %}
+
+
+    </body>
+</html>

@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Blog</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
+{% extends "base.html" %}
 
+{% block title %}Blog{% endblock title %}
+
+{% block header %}Blog{% endblock header %}
+
+{% block content %}
 <div>
-<h1 id="header">Blog</h1>
-</div>
-<div><span class="margin"><a href="/">Home</a></span><span class="margin"><a href="/aboutme">About me</a></span><span class="margin"><a href="/blog">Blog</a></span><span class="margin"><a href="/myprojects">My projects</a></span><span class="margin"><a href="/contact">Contact</a></span></div>
-<div>
-<img class="image" src="http://www.aliahtravelandtours.com/images/FD/World-Of-Travel-Wallpaper.jpg">
+    <img class="image" src="http://www.aliahtravelandtours.com/images/FD/World-Of-Travel-Wallpaper.jpg">
 </div>
 
 <p>February 18th</p>
@@ -29,7 +23,7 @@ The concept of taking a vacation is a recent invention, and has developed throug
 <p><a href="https://en.wikipedia.org/wiki/Vacation">Source</a></p>
 
 <div>
-<img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Hexahedron.jpg/280px-Hexahedron.jpg">
+    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Hexahedron.jpg/280px-Hexahedron.jpg">
 </div>
 
 <p>February 17th</p>
@@ -48,5 +42,5 @@ The cube is dual to the octahedron. It has cubical or octahedral symmetry.</p>
 
 <p><a href="https://en.wikipedia.org/wiki/Cube">Source</a></p>
 
-</body>
-</html>
+{% endblock content %}
+
